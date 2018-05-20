@@ -12,7 +12,7 @@ deamon: true
 
 # mount volumes (-v argument of docker run), relative to volume root or sub directory, optional
 directoryMount:
-  - '/etc/dnsmasq.d:/etc/dnsmasq.d'
+  - 'etc/dnsmasq.d:/etc/dnsmasq.d'
   - '/var/run/dnsmasq:/var/run/dnsmasq'
 
 # special type of mount volumes, in prepare command, if source config file not exist, it will create by
