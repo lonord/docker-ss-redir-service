@@ -18,7 +18,7 @@ RUN apt-get update \
 	&& tar -xJf "node-v$NODE_VERSION-linux-$ARCH.tar.xz" -C /usr/local --strip-components=1 --no-same-owner \
 	&& rm "node-v$NODE_VERSION-linux-$ARCH.tar.xz" \
 	&& echo "@lonord:registry=https://registry.lonord.name/" >> /root/.npmrc \
-	&& npm i -g @lonord/ss-redir-service --unsafe-perm=true --allow-root \
+	&& npm i -g @lonord/ss-redir-service@0.2.1 --unsafe-perm=true --allow-root \
 	&& apt-get purge -y --auto-remove wget xz-utils gettext build-essential autoconf libtool asciidoc xmlto libc-ares-dev automake -y \
 	&& rm -rf /var/lib/apt/lists/*
 CMD [ "ss-redir-service", "-v" ]
